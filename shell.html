@@ -1,0 +1,22 @@
+<!doctype html>
+<html lang="en-us">
+  <head>
+    <meta charset="utf-8">
+    <title>Emscripten-Generated Code</title>
+  </head>
+  <body>
+    <script type="text/javascript">
+    var Module = {
+        onRuntimeInitialized: function() {
+            // call the exported C function, note the underscore!
+            var result = _addc(20, 22);
+            var h = document.createElement("H1");
+            var t = document.createTextNode("The answer is: " + result);
+            h.appendChild(t);
+            document.body.appendChild(h);
+        }
+    }
+    </script>
+    {{{ SCRIPT }}}
+  </body>
+</html>
